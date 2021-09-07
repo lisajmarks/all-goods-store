@@ -6,9 +6,8 @@ import Default from './components/Default'
 import Product from './components/Product'
 import ProductList from './components/ProductList'
 import Button from 'react-bootstrap/Button'
+import ProductDetails from './components/ProductDetails'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Cards from './components/Cards'
-
 
 function App() {
   return (
@@ -19,6 +18,9 @@ function App() {
       <Default></Default>
       <Product></Product>
       <ProductList></ProductList>
+      <br />
+      <br />
+      <ProductDetails></ProductDetails>
     </div>
   );
 }

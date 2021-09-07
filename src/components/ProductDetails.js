@@ -7,9 +7,11 @@ import "../styles/Box.css"
 //parent container for each and every product 
 
 
-const ProductList = () => {
+const ProductDetails = () => {
+    const id = 1
+    
     const {data, error} = useFetch(
-        'https://fakestoreapi.com/products', 
+        `https://fakestoreapi.com/products/${id}`, 
         {headers: { accept: "application/json" }, method: "GET"},
     )
     
@@ -20,20 +22,20 @@ const ProductList = () => {
       if (!data) return null
 
       return (
-          <div className="grid">
+          <div>
               {
-                  data.map(product =>
                     <div>
-                    < Card style={{ width: '18rem' }}>
-                        <Card.Text>{product.title}</Card.Text>
-                        <Card.Img src={product.image} />
-                        <Card.Text>{product.price}</Card.Text>
+                    < Card style={{ width: '35rem' }}>
+                        <Card.Text>{data.title}</Card.Text>
+                        <Card.Img src={data.image} />
+                        <Card.Text>{data.price}</Card.Text>
+                        <Card.Text>{data.category}</Card.Text>
+                        <Card.Text>{data.description}</Card.Text>
                     </Card>
                     </div>
-                  )
               }
           </div>
       )
 }
 
-export default ProductList
+export default ProductDetails
