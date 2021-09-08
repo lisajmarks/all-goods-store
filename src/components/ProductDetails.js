@@ -4,12 +4,14 @@ import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col, } from 'react-bootstrap'
 import "../styles/Box.css"
+import { useParams } from 'react-router';
 //parent container for each and every product 
 
 
 const ProductDetails = () => {
-    const id = 1
-    
+    // const id = 1
+    const { id } = useParams()
+
     const {data, error} = useFetch(
         `https://fakestoreapi.com/products/${id}`, 
         {headers: { accept: "application/json" }, method: "GET"},

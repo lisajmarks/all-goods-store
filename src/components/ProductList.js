@@ -4,8 +4,9 @@ import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
-//parent container for each and every product 
+import { Link } from 'react-router-dom';
 
+//parent container for each and every product 
 
 const ProductList = () => {
     const {data, error} = useFetch(
@@ -24,11 +25,15 @@ const ProductList = () => {
               {
                   data.map(product =>
                     <div>
+                    <Link to={`/productdetails/${product.id}`}>
+                    {/* < Card.Link > */}
                     < Card style={{ width: '18rem' }}>
                         <Card.Text>{product.title}</Card.Text>
                         <Card.Img src={product.image} />
                         <Card.Text>{product.price}</Card.Text>
                     </Card>
+                    {/* </Card.Link> */}
+                    </Link>
                     </div>
                   )
               }

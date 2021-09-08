@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <Navbar />
         <Switch> 
@@ -20,16 +19,14 @@ function App() {
           <Route exact path="/allproducts">
             <ProductList />
           </Route>
-          <Route exact path="/productdetails"> 
+          <Route path="/productdetails/:id"> 
             <ProductDetails />
-          </Route> 
+          </Route>
           <Route exact path="cart"> 
             <Cart />
           </Route> 
-
         </Switch>
       </div>
-    </Router>
   );
 }
 
