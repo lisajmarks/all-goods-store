@@ -1,28 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Product from './Product';
 import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button } from 'react-bootstrap'
 import "../styles/Box.css"
 import { useParams } from 'react-router';
+import { CartContext } from '../Contexts/CartContext';
+
 //parent container for each and every product 
 
 
 
 const ProductDetails = () => {
-    // const id = 1
+    const { setCart, cart } = useContext(CartContext)
 
-    const [cart, setCart] = useState([]);
+    // const id = 1
     const addToCart = (product) => {
-        console.log('in add to cart')
-        console.log(product)
         setCart([...cart, product]);
+        console.log('cart is...:')
+        console.log(cart)
     };
-    
-    // const setCart = (products) => {
-    //     // set state (cart : products)
-    //     // setCart([...cart, product]);
-    // };
 
     const { id } = useParams()
 
@@ -32,8 +29,6 @@ const ProductDetails = () => {
     )
     
       if (error) return error
-
-      console.log(data)
 
       if (!data) return null
 
