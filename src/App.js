@@ -18,22 +18,22 @@ function App() {
   console.log(cart)
   return (
       <div className="App">
+        <CartContext.Provider value={{ cart, setCart }}>
         <Navbar />
         {/* <Switch>  */}
-        <CartContext.Provider value={{ cart, setCart }}>
-            <Route path="/productdetails/:id"> 
-              <ProductDetails />
-            </Route>
-            <Route exact path="/cart"> 
-              <Cart />
-            </Route> 
-          </CartContext.Provider>
-          <Route exact path="/allproducts">
-            <ProductList />
+          <Route path="/productdetails/:id"> 
+            <ProductDetails />
           </Route>
-          <Route exact path ="/">
-            <ProductList />
+          <Route exact path="/cart"> 
+            <Cart />
           </Route> 
+        </CartContext.Provider>
+        <Route exact path="/allproducts">
+          <ProductList />
+        </Route>
+        <Route exact path ="/">
+          <ProductList />
+        </Route> 
         {/* </Switch> */}
       </div>
   );
