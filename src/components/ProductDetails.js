@@ -22,8 +22,13 @@ const ProductDetails = () => {
         // if product already in the cart, update quantity
         const existingProductIndex = cart.findIndex((p) => p.id === product.id)
         if (existingProductIndex !== -1) {
-            cart[existingProductIndex].quantity += quantity
-            // setCart(cart)
+            const updatedCart = cart.map((p) => {
+                if (p.id === product.id) {
+                    p.quantity += quantity 
+                }
+                return p 
+            })
+            setCart(updatedCart)
         } else {
             const productWithQuanity = {...product, quantity}
             console.log(productWithQuanity)

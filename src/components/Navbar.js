@@ -5,6 +5,7 @@ import { CartContext } from '../Contexts/CartContext';
 import { Link } from 'react-router-dom';
 
 
+
 const Navbar = () => {
   const { cart } = useContext(CartContext)
   let totalItems = 0
