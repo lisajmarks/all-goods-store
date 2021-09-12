@@ -29,14 +29,13 @@ const Cart = () => {
                 < Card style={{ width: '18rem' }}>
                     <Card.Text>{product.title}</Card.Text>
                     <Card.Img src={product.image} />
-                    <Card.Text>{product.price}</Card.Text>
-                    <Card.Text> {product.quantity}</Card.Text>
+                    <Card.Text>$ {product.price}</Card.Text>
+                    <Card.Text> Quantity: {product.quantity}</Card.Text>
                     <Button onClick={() => deleteItem(product)}> Delete Item </Button>
                 </Card>
                 ) 
               }
             <Button onClick={() => history.push('/checkout')}> Check Out </Button>
-            <button>Cart Items ({totalItems})</button>
         </div>
     );
 }
