@@ -2,6 +2,7 @@ import React, { useContext} from 'react'
 import { CartContext } from '../Contexts/CartContext';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 
 
 const Cart = () => {
@@ -19,6 +20,7 @@ const Cart = () => {
     
 
     cart.map(p => totalItems += p.quantity)
+    const history = useHistory();
 
     return (
         <div>
@@ -32,8 +34,8 @@ const Cart = () => {
                     <Button onClick={() => deleteItem(product)}> Delete Item </Button>
                 </Card>
                 ) 
-
               }
+            <Button onClick={() => history.push('/checkout')}> Check Out </Button>
             <button>Cart Items ({totalItems})</button>
         </div>
     );

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import Product from './Product';
 import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button } from 'react-bootstrap'
@@ -7,6 +6,8 @@ import "../styles/Box.css"
 import { useParams } from 'react-router';
 import { CartContext } from '../Contexts/CartContext';
 import NumericInput from 'react-numeric-input';
+import RESPONSE from '../example-products';
+
 
 
 //parent container for each and every product 
@@ -41,14 +42,16 @@ const ProductDetails = () => {
 
     const { id } = useParams()
 
-    const {data, error} = useFetch(
-        `https://fakestoreapi.com/products/${id}`, 
-        {headers: { accept: "application/json" }, method: "GET"},
-    )
+    // const {data, error} = useFetch(
+    //     `https://fakestoreapi.com/products/${id}`, 
+    //     {headers: { accept: "application/json" }, method: "GET"},
+    // )
     
-      if (error) return error
+    //   if (error) return error
 
-      if (!data) return null
+    //   if (!data) return null
+
+      const data = RESPONSE[id-1]
 
       return (
           <div>

@@ -1,31 +1,34 @@
 import React from 'react'
-import Product from './Product';
 import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
 import { Link } from 'react-router-dom';
+import RESPONSE from '../example-products';
+
 
 //parent container for each and every product 
 
 const ProductList = () => {
-    const {data, error} = useFetch(
-        'https://fakestoreapi.com/products', 
-        {headers: { accept: "application/json" }, method: "GET"},
-    )
+    // const {data, error} = useFetch(
+    //     'https://fakestoreapi.com/products', 
+    //     {headers: { accept: "application/json" }, method: "GET"},
+    // )
     
-      if (error) return error
+    //   if (error) return error
 
-      console.log(data)
+    //   console.log(data)
 
-      if (!data) return null
+    //   if (!data) return null
+
+      const data = RESPONSE
 
       return (
           <div className="grid">
               {
                   data.map(product =>
                     <div>
-                    <Link to={`/productdetails/${product.id}`}>
+                    <Link to={`/products/${product.id}`}>
                     {/* < Card.Link > */}
                     < Card style={{ width: '18rem' }}>
                         <Card.Text>{product.title}</Card.Text>

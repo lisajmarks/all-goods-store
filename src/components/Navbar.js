@@ -19,7 +19,7 @@ const Navbar = () => {
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
     <ReactBootStrap.Nav className="me-auto">
-      <ReactBootStrap.NavLink as={Link} to="/allproducts">Products</ReactBootStrap.NavLink>
+      <ReactBootStrap.NavLink as={Link} to="/products">Products</ReactBootStrap.NavLink>
       <ReactBootStrap.NavLink as={Link} to="/cart">Cart ({totalItems})</ReactBootStrap.NavLink>
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
