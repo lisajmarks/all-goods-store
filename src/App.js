@@ -6,6 +6,7 @@ import Cart from './components/Cart';
 import ProductList from './components/ProductList';
 import ProductDetails from './components/ProductDetails';
 import Checkout from './components/Checkout'; 
+import Landing from './components/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
 import { CartContext } from './Contexts/CartContext';
@@ -20,7 +21,6 @@ function App() {
       <div className="App">
         <CartContext.Provider value={{ cart, setCart }}>
         <Navbar />
-        {/* <Switch>  */}
           <Route path="/products/:id"> 
             <ProductDetails />
           </Route>
@@ -35,9 +35,8 @@ function App() {
           <ProductList />
         </Route>
         <Route exact path ="/">
-          <ProductList />
+          <Landing />
         </Route> 
-        {/* </Switch> */}
       </div>
   );
 }

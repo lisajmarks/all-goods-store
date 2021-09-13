@@ -8,10 +8,6 @@ import { CartContext } from '../Contexts/CartContext';
 import NumericInput from 'react-numeric-input';
 import RESPONSE from '../example-products';
 
-
-
-//parent container for each and every product 
-
 const ProductDetails = () => {
 
     let quantity = 1 

@@ -15,12 +15,14 @@ const Navbar = () => {
 
 <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="light" variant="light">
   <ReactBootStrap.Container>
-  <ReactBootStrap.Navbar.Brand href="/">All Goods</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Brand href="/">All Goods Store</ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
     <ReactBootStrap.Nav className="me-auto">
       <ReactBootStrap.NavLink as={Link} to="/products">Products</ReactBootStrap.NavLink>
-      <ReactBootStrap.NavLink as={Link} to="/cart">Cart ({totalItems})</ReactBootStrap.NavLink>
+      <div className="cart">
+        <ReactBootStrap.NavLink as={Link} to="/cart">Cart ({totalItems})</ReactBootStrap.NavLink>
+      </div> 
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
   </ReactBootStrap.Container>
