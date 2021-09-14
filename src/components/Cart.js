@@ -36,6 +36,7 @@ const Cart = () => {
                 ) 
               }
             <Button onClick={() => history.push('/checkout')}> Check Out </Button>
+            <Button onClick={() => history.push('/products')}> Add More Items</Button>
         </div>
     );
 }

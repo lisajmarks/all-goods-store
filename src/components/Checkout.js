@@ -31,9 +31,9 @@ const Checkout = () => {
                 </Col> 
             </Row>
             <Row>
-                <Col> 
+                <div class = "p-5"> 
                     <CheckoutForm/>
-                </Col> 
+                </div> 
             </Row> 
         </Container>
     );

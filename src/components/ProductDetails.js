@@ -3,7 +3,7 @@ import { useFetch } from "react-async"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button } from 'react-bootstrap'
 import "../styles/Box.css"
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import { CartContext } from '../Contexts/CartContext';
 import NumericInput from 'react-numeric-input';
 import RESPONSE from '../example-products';
@@ -11,7 +11,7 @@ import RESPONSE from '../example-products';
 const ProductDetails = () => {
 
     let quantity = 1 
-
+    const history = useHistory();
     const { setCart, cart } = useContext(CartContext)
 
     // const id = 1
@@ -28,12 +28,9 @@ const ProductDetails = () => {
             setCart(updatedCart)
         } else {
             const productWithQuanity = {...product, quantity}
-            console.log(productWithQuanity)
             setCart([...cart, productWithQuanity]);
         }
-
-        console.log('cart is...:')
-        console.log(cart)
+        history.push('/cart')
     };
 
     const { id } = useParams()
