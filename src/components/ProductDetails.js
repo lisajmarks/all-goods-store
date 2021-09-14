@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useFetch } from "react-async"
+import "../styles/ProductCards.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button, Row, Col } from 'react-bootstrap'
 import "../styles/Box.css"
 import { useParams, useHistory } from 'react-router';
 import { CartContext } from '../Contexts/CartContext';
@@ -50,14 +51,25 @@ const ProductDetails = () => {
           <div>
               {
                 <div>
-                < Card style={{ width: '35rem' }}>
-                    <Card.Text>{data.title}</Card.Text>
-                    <Card.Img src={data.image} />
-                    <Card.Text>{data.price}</Card.Text>
-                    <Card.Text>{data.category}</Card.Text>
-                    <Card.Text>{data.description}</Card.Text>
-                    <NumericInput min={1} max={100} value={quantity} onChange={(valueAsNumber) => quantity=valueAsNumber} />
-                    <Button onClick={() => addToCart(data)}>Add To Cart</Button>
+                <Card className="product-details-card">
+                <Row> 
+                    <Col>
+                    <Card.Title className='title'>{data.title}</Card.Title>
+                    <Card.Img style={{ width: `75%`, margin:`10%` }} src={data.image} />
+                    </Col> 
+                    <Col style={{ margin:`10%` }} > 
+                    <Card.Text> Category: {data.category}</Card.Text>
+                    <Card.Text> {data.description}</Card.Text>
+                    <Card.Text> $ {data.price}</Card.Text>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col style={{ margin: `5%`}}> 
+                    Quantity: <NumericInput style={{ width: `25%`}} min={1} max={100} value={quantity} onChange={(valueAsNumber) => quantity=valueAsNumber} />
+                    <br />
+                    <Button style={{ width: `25%`, position: `center` }} onClick={() => addToCart(data)}>Add To Cart</Button>
+                    </Col>
+                </Row>
                 </Card>
                 </div>
               }

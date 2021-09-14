@@ -14,28 +14,28 @@ const Checkout = () => {
     }, 0)
 
     return (
-        <Container>
-            <Row>
-                <Col md={8}>
-            {
+        <div className="product-card">
+                <Col md={8}> {
                 cart.map((product) => (
-                < Card style={{ width: '18rem' }}>
-                    <Card.Text>{product.title}</Card.Text>
-                    <Card.Img src={product.image} />
+                <Card>
+                    <Card.Title className="title">{product.title}</Card.Title>
+                    <Card.Img className="image" src={product.image} />
+                    <div className="e-card-stacked">
                     <Card.Text>${product.price}</Card.Text>
                     <Card.Text> Quantity: {product.quantity}</Card.Text>
+                    </div> 
                 </Card>)
-                )} </Col>
+                )} 
+                </Col>
                 <Col md={4}> 
             <h3>Total Price: ${totalPrice} </h3>
                 </Col> 
-            </Row>
             <Row>
                 <div class = "p-5"> 
                     <CheckoutForm/>
                 </div> 
             </Row> 
-        </Container>
+        </div>
     );
 }
 

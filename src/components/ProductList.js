@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFetch } from "react-async"
+import "../styles/ProductCards.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
@@ -28,15 +29,14 @@ const ProductList = () => {
               {
                   data.map(product =>
                     <div>
-                    <Link to={`/products/${product.id}`}>
-                    {/* < Card.Link > */}
                     < Card style={{ width: '18rem' }}>
-                        <Card.Text>{product.title}</Card.Text>
+                    <Link to={`/products/${product.id}`}>
+                        <Card.Title>{product.title}</Card.Title>
                         <Card.Img src={product.image} />
                         <Card.Text>{product.price}</Card.Text>
-                    </Card>
-                    {/* </Card.Link> */}
                     </Link>
+
+                    </Card>
                     </div>
                   )
               }
