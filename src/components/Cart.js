@@ -26,13 +26,17 @@ const Cart = () => {
         <div>
               {
                cart.map(product => 
-                < Card style={{ width: '18rem' }}>
+                <div className="e-card e-card-horizontal" style={{ width: `400px`, padding:`1%` }}>
+                < Card style={{ margin: `1%`, display: `flex`, flexDirection: `row`, justifyContent: `center` }}>
+                    <Card.Img src={product.image} style={{ height: `300px` }}/>
+                    <div className="e-card-stacked">
                     <Card.Text>{product.title}</Card.Text>
-                    <Card.Img src={product.image} />
                     <Card.Text>$ {product.price}</Card.Text>
                     <Card.Text> Quantity: {product.quantity}</Card.Text>
                     <Button onClick={() => deleteItem(product)}> Delete Item </Button>
+                    </div>
                 </Card>
+                </div>
                 ) 
               }
             <Button onClick={() => history.push('/checkout')}> Check Out </Button>
