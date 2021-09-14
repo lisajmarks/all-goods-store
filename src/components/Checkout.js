@@ -14,7 +14,9 @@ const Checkout = () => {
     }, 0)
 
     return (
-        <div>
+        <Container>
+            <Row>
+                <Col md={8}>
             {
                 cart.map((product) => (
                 < Card style={{ width: '18rem' }}>
@@ -23,10 +25,17 @@ const Checkout = () => {
                     <Card.Text>${product.price}</Card.Text>
                     <Card.Text> Quantity: {product.quantity}</Card.Text>
                 </Card>)
-                )}
+                )} </Col>
+                <Col md={4}> 
             <h3>Total Price: ${totalPrice} </h3>
-            <CheckoutForm/>
-        </div>
+                </Col> 
+            </Row>
+            <Row>
+                <Col> 
+                    <CheckoutForm/>
+                </Col> 
+            </Row> 
+        </Container>
     );
 }
 
