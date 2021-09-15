@@ -19,6 +19,9 @@ const Cart = () => {
         console.log(updatedCart)
     }
     
+    const totalPrice = cart.reduce((total, product) => {
+        return total + (product.price * product.quantity)
+    }, 0)
 
     cart.map(p => totalItems += p.quantity)
     const history = useHistory();
@@ -41,6 +44,7 @@ const Cart = () => {
                 </div>
                 ) 
               }
+            <h4>Total Price: ${totalPrice} </h4>
             <Button onClick={() => history.push('/checkout')} style={{ margin: `1%`}}> Check Out </Button>
             <Button onClick={() => history.push('/products')}> Add More Items</Button>
         </div>

@@ -1,26 +1,29 @@
 import React from 'react'
 import "../styles/Landing.css";
-import { Container, Image } from 'react-bootstrap';
+import { Container, Image, Jumbotron, Row } from 'react-bootstrap';
 import shopping from '../images/shopping.png'
+import banner from '../images/banner.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const Landing = () => { 
     return (
-    <Container className="landingpage"> 
-        <h1>All Goods Store</h1>      
-        <p>Your one stop shop for all the goods!</p>
-    <Image src={shopping} fluid />
+    <div> 
+        <Jumbotron className="jumbo">
+            <Image src={banner} />
+        </Jumbotron>
+            <Container className="landingpage"> 
+                <Row> 
+                <Image className="shopping-img" fluid src={shopping} />
+                </Row>
+                <footer>
+                <Row>
+                        <p>Online Store Copyright 2021</p>  
+                </Row>
+                </footer>
 
-    {/* <div className="container-fluid text-center">
-        <h3>Where To Find Me?</h3>
-        <p>Lorem ipsum..</p>
-    </div>  */}
-
-    <footer class="container-fluid text-center">
-        <p>Online Store Copyright 2021</p>  
-    </footer>
     </Container>
+    </div>
     )}
 
 export default Landing; 

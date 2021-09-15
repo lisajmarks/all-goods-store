@@ -29,11 +29,11 @@ const ProductList = () => {
               {
                   data.map(product =>
                     <div>
-                    < Card style={{ width: '18rem' }}>
-                    <Link to={`/products/${product.id}`}>
-                        <Card.Title>{product.title}</Card.Title>
+                    < Card style={{ width: '18rem', padding:`2%`, margin: `5%`, textAlign: `center` }}>
+                        <Card.Title className="title">{product.title}</Card.Title>
+                        <Link to={`/products/${product.id}`}>
                         <Card.Img src={product.image} />
-                        <Card.Text>{product.price}</Card.Text>
+                        <Card.Text> $ {product.price}</Card.Text>
                     </Link>
 
                     </Card>
