@@ -6,6 +6,7 @@ import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
 import { Link } from 'react-router-dom';
 import RESPONSE from '../example-products';
+import Navbar from './Navbar';
 
 
 //parent container for each and every product 
@@ -25,11 +26,11 @@ const ProductList = () => {
       const data = RESPONSE
 
       return (
-          <div className="grid">
+        <div className="grid">
               {
                   data.map(product =>
-                    <div>
-                    < Card style={{ width: '18rem', padding:`2%`, margin: `5%`, textAlign: `center` }}>
+                    <div className="product-list-margins">
+                    < Card className="product-list-card" style={{ width: '18rem' }}>
                         <Card.Title className="title">{product.title}</Card.Title>
                         <Link to={`/products/${product.id}`}>
                         <Card.Img src={product.image} />

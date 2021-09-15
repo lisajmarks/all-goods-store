@@ -64,7 +64,7 @@ export const CheckoutForm = () => {
                     <Form.Control type="number" placeholder="123"/>
                 </Form.Group>
                 <Form.Group>
-                    <Button onClick={submitClick}>Confirm order</Button>
+                    <Button onClick={submitClick} style={{backgroundColor: `#591527`, marginTop:`2%`}}>Confirm order</Button>
                 </Form.Group>
             </Form>
         </div>

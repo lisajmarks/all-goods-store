@@ -12,17 +12,16 @@ const Landing = () => {
         <Jumbotron className="jumbo">
             <Image src={banner} />
         </Jumbotron>
-            <Container className="landingpage"> 
+            <Container fluid className="landingpage px-0"> 
                 <Row> 
                 <Image className="shopping-img" fluid src={shopping} />
                 </Row>
-                <footer>
+                <footer className="footer">
                 <Row>
                         <p>Online Store Copyright 2021</p>  
                 </Row>
                 </footer>
-
-    </Container>
+        </Container>
     </div>
     )}
 

@@ -21,7 +21,7 @@ const Cart = () => {
     
     const totalPrice = cart.reduce((total, product) => {
         return total + (product.price * product.quantity)
-    }, 0)
+    }, 0).toFixed(2)
 
     cart.map(p => totalItems += p.quantity)
     const history = useHistory();
@@ -32,21 +32,24 @@ const Cart = () => {
 
                 cart.map(product => 
                     <div className="e-card-cart">
+                    <Card style={{ borderColor: `#591527`}}> 
                         <Card.Title className="title">{product.title}</Card.Title>
-                        <Card className="cardBody">
+                        <div style={{ display: `flex`, justifyContent: `space-around`}}>
+                        {/* <Card className="cardBody"> */}
                         <Card.Img className="image" src={product.image} />
                         <div className="e-card-stacked">
                         <Card.Text>$ {product.price}</Card.Text>
                         <Card.Text> Quantity: {product.quantity}</Card.Text>
-                        <Button onClick={() => deleteItem(product)}> Delete Item </Button>
+                        <Button onClick={() => deleteItem(product)} style={{backgroundColor: `#591527`}}> Delete Item </Button>
+                        </div>
                         </div>
                     </Card>
                 </div>
                 ) 
               }
             <h4>Total Price: ${totalPrice} </h4>
-            <Button onClick={() => history.push('/checkout')} style={{ margin: `1%`}}> Check Out </Button>
-            <Button onClick={() => history.push('/products')}> Add More Items</Button>
+            <Button onClick={() => history.push('/products')} style={{ margin: `1%`, backgroundColor: `#591527`}}> Add More Items</Button>
+            <Button onClick={() => history.push('/checkout')} style={{ margin: `1%`, backgroundColor: `#591527`}}> Check Out </Button>
         </div>
     );
 }

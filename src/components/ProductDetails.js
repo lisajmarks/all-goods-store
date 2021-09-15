@@ -67,7 +67,7 @@ const ProductDetails = () => {
                     <Col style={{ margin: `5%`}}> 
                     Quantity: <NumericInput style={{ width: `25%`}} min={1} max={100} value={quantity} onChange={(valueAsNumber) => quantity=valueAsNumber} />
                     <br />
-                    <Button style={{ width: `25%`, position: `center` }} onClick={() => addToCart(data)}>Add To Cart</Button>
+                    <Button style={{ width: `25%`, position: `center`, backgroundColor: `#591527` }} onClick={() => addToCart(data)}>Add To Cart</Button>
                     </Col>
                 </Row>
                 </Card>
