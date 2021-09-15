@@ -19,7 +19,7 @@ const Navbar = () => {
   <ReactBootStrap.Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
     <ReactBootStrap.Nav>
       <ReactBootStrap.NavLink as={Link} to="/products">Products</ReactBootStrap.NavLink>
-        <ReactBootStrap.NavLink as={Link} to="/cart">Cart ({totalItems})</ReactBootStrap.NavLink>
+        <ReactBootStrap.NavLink as={Link} to="/cart"> Cart ({totalItems})</ReactBootStrap.NavLink>
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
   </ReactBootStrap.Container>

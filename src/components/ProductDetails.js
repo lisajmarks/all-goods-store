@@ -58,9 +58,9 @@ const ProductDetails = () => {
                     <Card.Img style={{ width: `75%`, margin:`10%` }} src={data.image} />
                     </Col> 
                     <Col style={{ margin:`10%` }} > 
-                    <Card.Text> Category: {data.category}</Card.Text>
-                    <Card.Text> {data.description}</Card.Text>
-                    <Card.Text> $ {data.price}</Card.Text>
+                    <Card.Text> <h5> <b>Category:</b> {data.category} </h5></Card.Text> <br /> 
+                    <Card.Text> <h5> <b>Description:</b>  {data.description} </h5></Card.Text> <br />
+                    <Card.Text> <h5> $ {data.price} </h5> </Card.Text> <br />
                     </Col>
                 </Row>
                 <Row>

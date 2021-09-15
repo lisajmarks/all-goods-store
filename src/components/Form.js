@@ -38,8 +38,8 @@ export const CheckoutForm = () => {
                     <Form.Label> Billing Address </Form.Label>
                     <Form.Control type="text" placeholder="Street Address" /> 
                     <Form.Control type="text" placeholder="City" /> 
-                    <Form.Control type="text" placeholder="Postal/Zip Code" /> 
                     <Form.Control type="text" placeholder="State/Providence" /> 
+                    <Form.Control type="text" placeholder="Postal/Zip Code" /> 
                 </Form.Group>
                 <Form.Group>
                     <Form.Label> Payment Information </Form.Label>

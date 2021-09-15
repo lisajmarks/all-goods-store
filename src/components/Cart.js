@@ -38,8 +38,8 @@ const Cart = () => {
                         {/* <Card className="cardBody"> */}
                         <Card.Img className="image" src={product.image} />
                         <div className="e-card-stacked">
-                        <Card.Text>$ {product.price}</Card.Text>
-                        <Card.Text> Quantity: {product.quantity}</Card.Text>
+                        <Card.Text> <h5> $ {product.price} </h5></Card.Text>
+                        <Card.Text> <h5> Quantity: {product.quantity} </h5></Card.Text>
                         <Button onClick={() => deleteItem(product)} style={{backgroundColor: `#591527`}}> Delete Item </Button>
                         </div>
                         </div>
