@@ -28,17 +28,6 @@ export const CheckoutForm = () => {
                     <Form.Control type="text" placeholder="Last Name" /> 
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label> First Name </Form.Label>
-                    <Form.Control type="text" placeholder="First Name" /> 
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label> Shipping Address </Form.Label>
-                    <Form.Control type="text" placeholder="Street Address" /> 
-                    <Form.Control type="text" placeholder="City" /> 
-                    <Form.Control type="text" placeholder="Postal/Zip Code" /> 
-                    <Form.Control type="text" placeholder="State/Providence" /> 
-                </Form.Group>
-                <Form.Group>
                     <Form.Label> Shipping Address </Form.Label>
                     <Form.Control type="text" placeholder="Street Address" /> 
                     <Form.Control type="text" placeholder="City" /> 
