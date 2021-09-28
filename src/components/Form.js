@@ -42,7 +42,7 @@ export const CheckoutForm = () => {
                     <Form.Control type="text" placeholder="Postal/Zip Code" /> 
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label> Payment Information </Form.Label>
+                    <br /> <Form.Label> Payment Information </Form.Label> <br />
                     Credit Card Number
                     <Form.Control type="number" placeholder="5555 5555 5555 5555"/>
                     Expiry Month

@@ -9,7 +9,7 @@ import { CheckoutForm } from './Form';
 
 const Checkout = () => {
     const { cart } = useContext(CartContext)
-
+    // reduce counts total in array 
     const totalPrice = cart.reduce((total, product) => {
         return total + (product.price * product.quantity)
     }, 0).toFixed(2)

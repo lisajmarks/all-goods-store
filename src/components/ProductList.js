@@ -5,25 +5,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
 import { Link } from 'react-router-dom';
-import RESPONSE from '../example-products';
+// import RESPONSE from '../example-products';
 import Navbar from './Navbar';
 
 
 //parent container for each and every product 
 
 const ProductList = () => {
-    // const {data, error} = useFetch(
-    //     'https://fakestoreapi.com/products', 
-    //     {headers: { accept: "application/json" }, method: "GET"},
-    // )
+    const {data, error} = useFetch(
+        'https://fakestoreapi.com/products', 
+        {headers: { accept: "application/json" }, method: "GET"},
+    )
     
-    //   if (error) return error
+      if (error) return error
 
-    //   console.log(data)
+      console.log(data)
 
-    //   if (!data) return null
+      if (!data) return null
 
-      const data = RESPONSE
+      // const data = RESPONSE
 
       return (
         <div className="grid">

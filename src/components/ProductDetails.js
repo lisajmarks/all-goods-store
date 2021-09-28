@@ -7,7 +7,7 @@ import "../styles/Box.css"
 import { useParams, useHistory } from 'react-router';
 import { CartContext } from '../Contexts/CartContext';
 import NumericInput from 'react-numeric-input';
-import RESPONSE from '../example-products';
+// import RESPONSE from '../example-products';
 
 const ProductDetails = () => {
 
@@ -36,16 +36,16 @@ const ProductDetails = () => {
 
     const { id } = useParams()
 
-    // const {data, error} = useFetch(
-    //     `https://fakestoreapi.com/products/${id}`, 
-    //     {headers: { accept: "application/json" }, method: "GET"},
-    // )
+    const {data, error} = useFetch(
+        `https://fakestoreapi.com/products/${id}`, 
+        {headers: { accept: "application/json" }, method: "GET"},
+    )
     
-    //   if (error) return error
+      if (error) return error
 
-    //   if (!data) return null
+      if (!data) return null
 
-      const data = RESPONSE[id-1]
+    //   const data = RESPONSE[id-1]
 
       return (
           <div>
