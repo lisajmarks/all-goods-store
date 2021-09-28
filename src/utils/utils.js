@@ -7,4 +7,4 @@ fetch('https://fakestoreapi.com/carts')
 .then(json=>console.log(json))
 
 
-export const getAllProducts = RESPONSE
+// export const getAllProducts = RESPONSE
