@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/all-goods-store/static/css/main.00acedf5.chunk.css",
+    "main.js": "/all-goods-store/static/js/main.a1e6ca0e.chunk.js",
+    "main.js.map": "/all-goods-store/static/js/main.a1e6ca0e.chunk.js.map",
+    "runtime-main.js": "/all-goods-store/static/js/runtime-main.c4858a13.js",
+    "runtime-main.js.map": "/all-goods-store/static/js/runtime-main.c4858a13.js.map",
+    "static/css/2.818011ed.chunk.css": "/all-goods-store/static/css/2.818011ed.chunk.css",
+    "static/js/2.715b2ea4.chunk.js": "/all-goods-store/static/js/2.715b2ea4.chunk.js",
+    "static/js/2.715b2ea4.chunk.js.map": "/all-goods-store/static/js/2.715b2ea4.chunk.js.map",
+    "index.html": "/all-goods-store/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/all-goods-store/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.00acedf5.chunk.css.map": "/all-goods-store/static/css/main.00acedf5.chunk.css.map",
+    "static/js/2.715b2ea4.chunk.js.LICENSE.txt": "/all-goods-store/static/js/2.715b2ea4.chunk.js.LICENSE.txt",
+    "static/media/banner.d58da196.png": "/all-goods-store/static/media/banner.d58da196.png",
+    "static/media/shopping.663b9c41.png": "/all-goods-store/static/media/shopping.663b9c41.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4858a13.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.715b2ea4.chunk.js",
+    "static/css/main.00acedf5.chunk.css",
+    "static/js/main.a1e6ca0e.chunk.js"
+  ]
+}
