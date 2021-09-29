@@ -1,6 +1,6 @@
 {
   "homepage": "http://lisajmarks.github.io/all-goods-store",
-  "name": "commerce-store",
+  "name": "all-goods-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
