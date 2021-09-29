@@ -14,7 +14,7 @@ const Navbar = () => {
 <div className="navbar-custom" >
 <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="transparent">
   <ReactBootStrap.Container>
-  <ReactBootStrap.Navbar.Brand href="/">All Goods Store</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Brand href="/all-goods-store">All Goods Store</ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
     <ReactBootStrap.Nav>
