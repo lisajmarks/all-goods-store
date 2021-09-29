@@ -10,9 +10,9 @@ export const CheckoutForm = () => {
     const { setCart } = useContext(CartContext)
 
     const submitClick = () => {
-        console.log('LOGGING')
+        // console.log('LOGGING')
         setCart([]) 
-        history.push("")
+        history.push("/all-goods-store")
 
     }
 
