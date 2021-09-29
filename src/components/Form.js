@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { CartContext } from '../Contexts/CartContext';
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Button } from 'react-bootstrap'
 
 

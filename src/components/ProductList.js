@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFetch } from "react-async"
 import "../styles/ProductCards.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card } from 'react-bootstrap'
 import "../styles/Box.css"
 import { Link } from 'react-router-dom';

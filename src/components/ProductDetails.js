@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useFetch } from "react-async"
 import "../styles/ProductCards.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card, Button, Row, Col } from 'react-bootstrap'
 import "../styles/Box.css"
 import { useParams, useHistory } from 'react-router';

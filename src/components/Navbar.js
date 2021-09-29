@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import "../styles/Landing.css";
 import * as ReactBootStrap from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import { CartContext } from '../Contexts/CartContext';
 import { Link } from 'react-router-dom';
 
