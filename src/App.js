@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/products">
           <ProductList />
         </Route>
-        <Route exact path ="/">
+        <Route exact path ="/all-goods-store">
           <Landing />
         </Route> 
       </div>
